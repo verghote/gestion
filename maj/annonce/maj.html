@@ -1,0 +1,29 @@
+<div class="formulaire">
+    <div id="msg"></div>
+    <label for="date" class="obligatoire col-form-label">Date de votre épreuve</label>
+    <input id='date'
+           type="date"
+           style="width: 175px"
+
+           required
+    >
+    <label for="nom" class="obligatoire col-form-label">Nom de votre épreuve</label>
+    <input id='nom'
+           type="text"
+
+           required
+           pattern="^[0-9A-Za-zÀÇÈÉÊàáâçèéêëî](.*[0-9A-Za-zÀÇÈÉÊàáâçèéêëî!])*$"
+           maxlength="100"
+           minlength="8"
+    >
+    <label class='obligatoire col-form-label' for="description">Description de l'épreuve </label>
+    <textarea id='description' required></textarea>
+
+    <div class="d-flex justify-content-evenly">
+        <button id="btnModifier" class="btn btn-sm btn-danger mt-3">Modifier</button>
+        <a href="../../index.php" class="btn btn-sm btn-primary mt-3">
+            <i class="bi bi-arrow-90deg-up"></i>
+            Annuler
+        </a>
+    </div>
+</div>

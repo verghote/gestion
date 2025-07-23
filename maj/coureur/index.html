@@ -1,0 +1,95 @@
+<div class="formulaire" id="formulaire">
+    <div id="msg"></div>
+    <div class="etape">
+        <h5>Selection du licencié</h5>
+        <div class="d-flex flex-row justify-content-center">
+            <div class="form-recherche">
+                <label for="nomR">Nom du licencié :</label>
+                <input id="nomR" type="text" pattern="^[a-zA-Z ]+$" placeholder="Saisir les premières lettres"
+                       autocomplete="off">
+            </div>
+        </div>
+    </div>
+    <div class="etape">
+        <h5>Identité du licencié</h5>
+        <label for="nom" class="obligatoire">
+            Nom <span
+                class='commentaire'>30 caractères maximum, caractères autorisés : lettres non accentuées et espace</span>
+        </label>
+        <input id="nom"
+               type="text"
+
+               required
+               pattern="^[A-Za-z]( ?[A-Za-z])*$"
+               maxlength="30"
+               minlength="3"
+               autocomplete="off">
+
+        <!-- Prénom -->
+        <label for="prenom" class="obligatoire">
+            Prénom <span class='commentaire'>30 caractères maximum, caractères autorisés : lettres non accentuées et espace</span>
+        </label>
+        <input id="prenom"
+               type="text"
+               required
+               pattern="^[A-Za-z]( ?[A-Za-z])*$"
+               maxlength="30"
+               minlength="3"
+               autocomplete="off">
+
+        <label for="sexe">Sexe</label>
+        <select id="sexe">
+            <option value="M">Homme</option>
+            <option value="F">Femme</option>
+        </select>
+
+        <label for="dateNaissance">Date de naissance</label>
+        <input id="dateNaissance" type="date" required>
+        <div class="d-flex justify-content-evenly">
+            <button id='btnSupprimer' class="btn btn-outline-danger ">Supprimer</button>
+        </div>
+    </div>
+
+    <div class="etape">
+        <h5>Informations du licencié</h5>
+        <label for="licence" class="obligatoire">
+            Licence<span>(Numéro composé de 6 ou 7 chiffres)</span>
+        </label>
+        <input id="licence"
+               type="text"
+
+               placeholder="6 ou 7 chiffres"
+               required
+               minlength="6"
+               maxlength="7"
+               pattern="^[0-9]{6,7}$"
+               autocomplete="off">
+
+        <label for="idClub" class="obligatoire">Club</label>
+        <select id="idClub"></select>
+
+        <label for="ffa">Validé par le Web Service de la FFA</label>
+        <input class="form-check-input" type="checkbox" id="ffa">
+    </div>
+
+    <div class="etape">
+        <h5>Informations optionnelles</h5>
+        <label for="email">Adresse mail</label>
+        <input id="email" type="email" autocomplete="off">
+
+        <label for="telephone">
+            Téléphone portable<span class='commentaire'> (10 chiffres, 06XXXXXXXX ou 07XXXXXXXX)</span>
+        </label>
+        <input id="telephone"
+               type="text"
+               pattern="^0(6|7)[0-9]{8}$"
+               maxlength="10"
+               minlength="10"
+               autocomplete="off">
+
+    </div>
+
+
+
+</div>
+

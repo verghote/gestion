@@ -1,0 +1,27 @@
+<div class="d-flex flex-wrap justify-content-center align-items-center gap-4 mx-auto">
+    <!-- Bloc sélection catégorie -->
+    <div class="d-flex align-items-center">
+        <label class="col-form-label me-3" for="idCategorie">Catégorie</label>
+        <select  id="idCategorie" style="width: 300px;"></select>
+    </div>
+
+    <!-- Bloc nombre de coureurs -->
+    <div class="d-flex align-items-center">
+        <span class="me-2">Nombre de coureurs :</span>
+        <div id="nb" class="fw-bold text-center"></div>
+    </div>
+</div>
+
+<table style="margin: auto; margin-top: 20px; ">
+    <thead class="">
+    <tr>
+        <th style="width: 100px; text-align: center">Licence</th>
+        <th style="width: 350px; text-align: left">Nom</th>
+        <th style="width: 20px; text-align: center" class="masquer">Sexe</th>
+        <th style="width: 100px; text-align: center" class="masquer">Né(e) le</th>
+        <th style="width: 80px; text-align: center ">Catégorie</th>
+        <th style="width: 400px;text-align: left ">Club</th>
+    </tr>
+    </thead>
+    <tbody id="lesLignes"></tbody>
+</table>

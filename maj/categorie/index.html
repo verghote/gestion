@@ -1,0 +1,64 @@
+<div class="formulaire">
+
+    <div class="etape">
+        <label for="idR" class="col-form-label mb-0">Sélectionner la catégorie à modifier </label>
+        <select id="idR"  style="max-width: 250px;"></select>
+    </div>
+    <div class="etape">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="mb-0">Catégorie : <span class="nom"></span></h5>
+        </div>
+        <div id="msg"></div>
+        <!-- Nom -->
+        <label for="nom"
+               class="obligatoire">
+            Nom <span
+                class='commentaire'>(5 à 20 caractères, lettres non accentuées avec 1 ou 2 chiffres à la fin)</span>
+        </label>
+        <input id="nom"
+               type="text"
+
+               style="width: 200px;"
+               required
+               pattern="^[A-Za-z]+(?: [A-Za-z]+)*(?: \d{1,2})?$"
+               minlength="5"
+               maxlength="20"
+               autocomplete="off">
+
+        <!-- Âges minimum et maximum -->
+        <label for="ageMin" class="obligatoire">Âge minimum</label>
+        <input id="ageMin"
+               type="number"
+
+               style="width: 60px"
+               required
+               min="1"
+               max="99"
+               autocomplete="off">
+
+        <label for="ageMax" class="obligatoire">Âge maximum</label>
+        <input id="ageMax"
+               type="number"
+
+               style="width: 60px"
+               required
+               min="1"
+               max="99"
+               autocomplete="off">
+        <div id="nb"></div>
+        <div class="d-flex justify-content-evenly">
+            <button id="btnModifier" class="btn btn-outline-danger ">Modifier</button>
+            <button id='btnSupprimer' class="btn btn-outline-danger ">Supprimer</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
