@@ -14,7 +14,7 @@ class Categorie extends Table
         $input = new InputText();
         $input->Require = true;
         // une lettre suvie d'un ou 1 2 caractères alphanumériques
-        $input->Pattern = "^[A-za-z][A-za-z0-9]{1,2}$";
+        $input->Pattern = "^[A-Za-z][A-Za-z0-9]{1,2}$";
         $input->MinLength = 2;
         $input->MaxLength = 3;
         $input->Casse = 'U'; // la valeur sera mise en majuscule

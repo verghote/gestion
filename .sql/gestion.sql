@@ -116,7 +116,7 @@ DELIMITER ;;
     -- Mise en forme et vérification sur le code
     set new.id = ucase(new.id);
 
-    if new.id not regexp '^[A-za-z][A-za-z0-9]{1,2}$' then
+    if new.id not regexp '^[A-Za-z][A-Za-z0-9]{1,2}$' then
         signal sqlstate '45000' set message_text = '~Le code ne respecte pas le format attendu.';
     end if;
 
@@ -179,7 +179,7 @@ DELIMITER ;;
     if new.id <> old.id then
         set new.id = ucase(new.id);
 
-        if new.id not regexp '^[A-za-z][A-za-z0-9]{1,2}$' then
+        if new.id not regexp '^[A-Za-z][A-Za-z0-9]{1,2}$' then
             signal sqlstate '45000' set message_text = '~Le code ne respecte pas le format attendu.';
         end if;
 

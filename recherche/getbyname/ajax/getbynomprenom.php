@@ -11,7 +11,7 @@ if (!Std::existe('search')) {
 $search = $_GET['search'];
 
 // Vérification du format de l'identifiant
-if (!preg_match('/^[a-zA-z]+$/', $search)) {
+if (!preg_match('/^[a-zA-Z]+$/', $search)) {
     echo json_encode([]);
     exit;
 }

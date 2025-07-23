@@ -1,7 +1,17 @@
 <?php
+// définition du mode de développement
+define('DEV', false);
+
 // Détection du type de réponse attendu (HTML ou JSON)
 if (stripos($_SERVER['SCRIPT_FILENAME'], '/ajax/') !== false) {
     header('Content-Type: application/json; charset=utf-8');
+    if (!DEV) {
+        // Si le mode n'est pas 'dev', on interdit l'accès direct aux scripts AJAX
+        if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) || strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest') {
+            header('Location:/erreur/403.php');
+            exit;
+        }
+    }
 } else {
     header('Content-Type: text/html; charset=utf-8');
 }
