@@ -1,0 +1,20 @@
+[
+  {
+    "label": "Catégorie",
+    "href": "/administration/categorie/liste"
+  },
+  {
+    "label" : "Licencié",
+    "href" : "/administration/licencie/liste"
+  },
+  {
+    "label" : "Annonce",
+    "href" : "/administration/annonce/liste"
+  },
+  {
+    "label" : "Projet",
+    "href" : "/administration/projet/liste"
+  }
+]
+
+

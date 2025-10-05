@@ -1,0 +1,59 @@
+<div class="formulaire" style="width: 560px; transform: translateY(-30px);">
+    <div id="msg"></div>
+
+    <label for="idR" class="mb-0">Sélectionner la catégorie</label>
+    <select id="idR" style="width: 300px"></select>
+    <div id="nb" style="font-size: 0.75rem; font-style: italic; transform: translateY(-10px);"></div>
+
+    <!-- Code -->
+    <label for="id" class="obligatoire">
+        Code
+        <span class='commentaire'>(2 ou 3 caractères alphanumériques, en commençant par une lettre)</span>
+    </label>
+    <input id="id"
+           type="text"
+           style="width: 100px;"
+           required
+           pattern="^[A-Za-z][A-Za-z0-9]{1,2}$"
+           minlength="2"
+           maxlength="3"
+    >
+    <!-- Nom -->
+    <label for="nom" class="obligatoire">
+        Nom
+        <span class='commentaire'>(5 à 20 caractères, lettres non accentuées avec 1 ou 2 chiffres à la fin)</span>
+    </label>
+    <input id="nom"
+           type="text"
+           style="width: 200px;"
+           required
+           pattern="^[A-Za-z]+(?: [A-Za-z]+)*(?: \d{1,2})?$"
+           minlength="5"
+           maxlength="20"
+    >
+
+    <!-- Âges minimum et maximum -->
+    <div class="champ" style="--input-max-width: 60px">
+        <label for="ageMin" class="obligatoire">Âge minimum</label>
+        <input id="ageMin"
+               type="number"
+               required
+               min="1"
+               max="99"
+        >
+    </div>
+    <div class="champ" style="--input-max-width: 60px">
+        <label for="ageMax" class="obligatoire">Âge maximum</label>
+        <input id="ageMax"
+               type="number"
+               required
+               min="1"
+               max="99"
+        >
+    </div>
+    <div class="d-flex justify-content-center gap-2 mb-2">
+        <button id="btnModifier" class="btn btn-outline-danger ">Modifier</button>
+        <button id='btnSupprimer' class="btn btn-outline-danger">Supprimer</button>
+
+    </div>
+</div>
