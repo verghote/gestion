@@ -1,0 +1,40 @@
+<div class="formulaire" style="max-width: 48rem">
+    <div id="msg"></div>
+    <!-- Étape 1 : Nom du nouveau projet -->
+    <div class="etape" >
+            <label for="nom" class="obligatoire ">Nom du projet </label>
+            <input id="nom"
+                   type="text"
+                   minlength="10"
+                   maxlength="300"
+                   required
+                   placeholder="Nom du projet"
+                   >
+    </div>
+
+    <!-- Étape 2 : Les compétences -->
+    <div class="etape"  style="display: none;">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="mb-0">Liste des compétences du bloc 1 couvertes par ce projet</h5>
+        </div>
+        <div id="listeCompetence" class="mt-3"></div>
+
+    </div>
+    <!-- Étape 3 : Résumé -->
+    <div class="etape" style="display: none;">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5>Résumé du projet</h5>
+        </div>
+
+        <div><strong>Nom du projet :</strong> <span id="r-nom"></span></div>
+        <div class="mt-2">
+            <strong>Compétences sélectionnées :</strong>
+            <table>
+                <tbody id="lesLignes"></tbody>
+            </table>
+        </div>
+        <div class="text-center m-2">
+            <button class="btn btn-outline-danger" id="btnEnregistrer">Enregistrer le projet et ses compétences</button>
+        </div>
+
+</div>
