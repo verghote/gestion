@@ -1,0 +1,14 @@
+[
+  {
+    "label": "Liste",
+    "href": "/administration/projet/liste"
+  },
+  {
+    "label": "Ajout",
+    "href": "/administration/projet/ajout"
+  },
+  {
+    "label": "Mise à jour",
+    "href": "/administration/projet/maj"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "label": "Liste",
+    "href": "/administration/categorie/liste"
+  },
+  {
+    "label": "Ajout",
+    "href": "/administration/categorie/ajout"
+  },
+  {
+    "label": "Mise à jour",
+    "href": "/administration/categorie/maj"
+  }
+]

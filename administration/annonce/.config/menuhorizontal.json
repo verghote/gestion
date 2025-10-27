@@ -1,0 +1,10 @@
+[
+  {
+    "label": "Liste",
+    "href": "/administration/annonce/liste"
+  },
+  {
+    "label": "Ajout",
+    "href": "/administration/annonce/ajout"
+  }
+]

@@ -1,0 +1,56 @@
+<div class="formulaire" style='width:600px;'>
+    <div id="msg"></div>
+    <!-- Code -->
+    <label for="id" class="obligatoire">
+        Code <span class='commentaire'>(2 ou 3 caractères alphanumériques, en commençant par une lettre)</span>
+    </label>
+    <input id="id"
+           type="text"
+           style="width: 60px;"
+           required
+           maxlength="3"
+           minlength="2"
+           pattern="^[A-Za-z][A-Za-z0-9]{1,2}$"
+           >
+    <!-- Nom -->
+    <label for="nom" class="obligatoire">
+        Nom <span class='commentaire'>(5 à 20 caractères, lettres non accentuées avec 1 ou 2 chiffres à la fin)</span>
+    </label>
+    <input id="nom"
+           type="text"
+           style="width: 250px;"
+           required
+           pattern="^[A-Za-z]+(?: [A-Za-z]+)*(?: \d{1,2})?$"
+           minlength="5"
+           maxlength="20"
+           >
+
+    <!-- Âges minimum et maximum -->
+    <label for="ageMin" class="obligatoire">Âge minimum</label>
+    <input id="ageMin"
+           type="number"
+           style="width: 60px"
+           required
+           min="1"
+           max="99"
+           >
+
+    <label for="ageMax" class="obligatoire">Âge maximum</label>
+    <input id="ageMax"
+           type="number"
+           style="width: 60px"
+           required
+           min="1"
+           max="99"
+           >
+    <div class="d-flex justify-content-evenly">
+        <button id="btnAjouter" class="btn btn-outline-danger mt-3">✚ Ajouter</button>
+    </div>
+</div>
+
+
+
+
+
+
+

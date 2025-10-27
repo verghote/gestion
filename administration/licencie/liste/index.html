@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-between">
+    <div class="form-recherche">
+        <label for="search">Rechercher :</label>
+        <input id="search" type="text" placeholder="licence, nom ou club..." >
+    </div>
+    <div class="form-recherche">
+        <label for="search">Nombre de coureurs :</label>
+        <div id="nb" style="font-weight: bold; text-align: center;"></div>
+    </div>
+</div>
+<table id="leTableau">
+    <thead class="">
+    <tr>
+        <th data-champ="licence" data-type="text" style="width: 130px; text-align: center">Licence</th>
+        <th data-champ="nomPrenom" data-type="text" style="width: 350px; text-align: left">Nom prénom</th>
+        <th data-champ="sexe" data-type="text" style="width: 80px; text-align: center">Sexe</th>
+        <th data-champ="dateNaissanceFr" data-type="date" style="width: 160px; text-align: center">Né(e) le</th>
+        <th data-champ="idCategorie" data-type="text" style="width: 100px; text-align: center ">Cat.</th>
+        <th data-champ="nomClub" data-type="text" style="width: 350px;text-align: left ">Club</th>
+        <th>FFA</th>
+        <th>Email</th>
+        <th>Téléphone</th>
+    </tr>
+    </thead>
+    <tbody id="lesLignes"></tbody>
+</table>
+
+
+
+
+

@@ -1,0 +1,87 @@
+<div class="formulaire" style="width: 660px">
+    <div id="msg"></div>
+    <div class="etape">
+        <h5>Identité du licencié</h5>
+        <!-- Nom -->
+        <label for="nom" class="obligatoire">
+            Nom <span
+                class='commentaire'>(30 caractères maximum, caractères autorisés : lettres non accentuées et espace)</span>
+        </label>
+        <input id="nom"
+               type="text"
+               required
+               pattern="^[A-Za-z]( ?[A-Za-z])*$"
+               maxlength="30"
+               minlength="3"
+               >
+
+        <!-- Prénom -->
+        <label for="prenom" class="obligatoire">
+            Prénom <span class='commentaire'>(30 caractères maximum, caractères autorisés : lettres non accentuées et espace)</span>
+        </label>
+        <input id="prenom"
+               type="text"
+               required
+               pattern="^[A-Za-z]( ?[A-Za-z])*$"
+               maxlength="30"
+               minlength="3"
+               >
+        <!-- Sexe -->
+        <label for="sexe">Sexe</label>
+        <select id="sexe" style="display : block; width: 150px">
+            <option value="M">Homme</option>
+            <option value="F">Femme</option>
+        </select>
+
+        <!-- Date de naissance -->
+        <label for="dateNaissance">Date de naissance</label>
+        <input id="dateNaissance" type="date" required>
+    </div>
+
+    <div class="etape">
+        <h5>Informations du licencié</h5>
+        <!-- Licence -->
+        <label for="licence" class="obligatoire">
+            Licence <span class="commentaire">(Numéro composé de 6 ou 7 chiffres)</span>
+        </label>
+        <input id="licence"
+               type="text"
+               placeholder="6 ou 7 chiffres"
+               required
+               minlength="6"
+               maxlength="7"
+               pattern="^[0-9]{6,7}$"
+               >
+
+        <!-- Club -->
+        <label for="idClub" class="obligatoire">Club</label>
+        <select id="idClub"></select>
+
+        <!-- FFA -->
+        <label for="ffa">Validé par le Web Service de la FFA</label>
+        <input class="form-check-input" type="checkbox" id="ffa">
+    </div>
+
+    <div class="etape">
+        <h5>Informations optionnelles</h5>
+        <!-- email -->
+        <label for="email">Adresse mail</label>
+        <input id="email" type="email" >
+
+        <!-- Téléphone -->
+        <label for="telephone">
+            Téléphone portable<span class='commentaire'> (10 chiffres, 06XXXXXXXX ou 07XXXXXXXX)</span>
+        </label>
+        <input id="telephone"
+               type="text"
+               pattern="^0(6|7)[0-9]{8}$"
+               maxlength="10"
+               minlength="10"
+               >
+
+        <div class="d-flex justify-content-evenly mt-3">
+            <button id="btnAjouter" class="btn btn-outline-danger">✚ Ajouter</button>
+        </div>
+    </div>
+
+</div>

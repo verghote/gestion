@@ -1,0 +1,14 @@
+[
+  {
+    "label": "Liste",
+    "href": "/administration/licencie/liste"
+  },
+  {
+    "label": "Ajout",
+    "href": "/administration/licencie/ajout"
+  },
+  {
+    "label": "Mise à jour",
+    "href": "/administration/licencie/maj"
+  }
+]

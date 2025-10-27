@@ -1,0 +1,96 @@
+<div class="formulaire" id="formulaire">
+    <div id="msg"></div>
+    <div class="etape">
+        <div>Cliquez sur le bouton Suivant pour procéder à la modification</div>
+        <label for="nomR">Nom du licencié :</label>
+        <input id="nomR" type="text" pattern="^[a-zA-Z ]+$" placeholder="Saisir les premières lettres"
+               style="width: 300px"
+               >
+        <button id='btnSupprimer' class="w-100 btn btn-outline-danger" style="display: none">Supprimer</button>
+    </div>
+    <div class="etape" id="zoneInformationsPersonnelles">
+        <h5>Informations personnelles concernant <div class="nom"></div></h5>
+        <label for="nom" class="obligatoire">
+            Nom <span
+                class='commentaire'>30 caractères maximum, caractères autorisés : lettres non accentuées et espace</span>
+        </label>
+        <input id="nom"
+               type="text"
+               required
+               pattern="^[A-Za-z]( ?[A-Za-z])*$"
+               maxlength="30"
+               minlength="3"
+               >
+
+        <!-- Prénom -->
+        <label for="prenom" class="obligatoire">
+            Prénom <span class='commentaire'>30 caractères maximum, caractères autorisés : lettres non accentuées et espace</span>
+        </label>
+        <input id="prenom"
+               type="text"
+               required
+               pattern="^[A-Za-z]( ?[A-Za-z])*$"
+               maxlength="30"
+               minlength="3"
+               >
+
+        <label for="sexe">Sexe</label>
+        <select id="sexe">
+            <option value="M">Homme</option>
+            <option value="F">Femme</option>
+        </select>
+
+        <label for="dateNaissance">Date de naissance</label>
+        <input id="dateNaissance" type="date" required>
+        <button id="btnModifierInformationsPersonnelles" class="w-100 btn btn-outline-danger ">Modifier</button>
+    </div>
+
+    <div class="etape" id="zoneInformationsSportives">
+        <h5>Informations sportives concernant <span class="nom"></span></h5>
+        <label for="licence" class="obligatoire">
+            Licence <span>(Numéro composé de 6 ou 7 chiffres)</span>
+        </label>
+        <input id="licence"
+               type="text"
+               placeholder="6 ou 7 chiffres"
+               required
+               minlength="6"
+               maxlength="7"
+               pattern="^[0-9]{6,7}$"
+               >
+
+        <label for="idClub" class="obligatoire">Club</label>
+        <select id="idClub"></select>
+
+        <label for="ffa">Validé par le Web Service de la FFA</label>
+        <input class="form-check-input" type="checkbox" id="ffa">
+        <button id="btnModifierInformationsSportives" class="w-100 btn btn-outline-danger ">Modifier</button>
+    </div>
+
+    <div class="etape" id="zoneInformationsOptionnelles">
+        <h5>Informations optionnelles concernant <span class="nom"></span></h5>
+        <!-- Champ Email -->
+        <label for="email">Adresse mail</label>
+        <div class="champ-optionnel">
+            <input id="email" type="email" required >
+            <span class="icone-effacer" data-cible="email" style="display: none;">✘️</span>
+        </div>
+
+        <!-- Champ Téléphone -->
+        <label for="telephone">
+            Téléphone portable
+            <span class='commentaire'>(10 chiffres, 06XXXXXXXX ou 07XXXXXXXX)</span>
+        </label>
+        <div class="champ-optionnel">
+            <input id="telephone"
+                   type="text"
+                   required
+                   pattern="^0(6|7)[0-9]{8}$"
+                   maxlength="10"
+                   minlength="10">
+            <span class="icone-effacer" data-cible="telephone" style="display: none;">✘️</span>
+        </div>
+        <output>Ces données sont automatiqument enregistrées une fois saisies</output>
+    </div>
+</div>
+

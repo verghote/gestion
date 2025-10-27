@@ -1,0 +1,30 @@
+<div class="formulaire">
+    <div id="msg"></div>
+    <div class="etape">
+        <!-- Date -->
+        <label for="date" class="obligatoire" title="Date de l'épreuve">Date </label>
+        <input id="date"
+               type="date"
+               required>
+        <!-- Nom -->
+        <label for="nom" class="obligatoire">Nom </label>
+        <input id="nom"
+               type="text"
+               required
+               placeholder="Nom de l'épreuve"
+               title=" Au moins 8 caractères "
+               pattern="^[0-9A-Za-zÀÇÈÉÊàáâçèéêëî](.*[0-9A-Za-zÀÇÈÉÊàáâçèéêëî!])*$"
+               minlength="8"
+               maxlength="100">
+    </div>
+    <div class="etape">
+        <!-- Description -->
+        <label for="description" class="obligatoire">Description de l'épreuve</label>
+        <textarea id="description" required></textarea>
+
+        <!-- Bouton -->
+        <div class="d-flex justify-content-evenly">
+            <button id="btnAjouter" class="btn btn-outline-danger mt-3">✚ Ajouter</button>
+        </div>
+    </div>
+</div>
