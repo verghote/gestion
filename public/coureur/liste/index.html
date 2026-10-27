@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="/css/recherche.css">
+
+
+<div class="page-card">
+    <header class="page-header">
+        <div class="page-header-top">
+            <h1 class="page-title">
+                Liste des coureurs
+            </h1>
+            <div class="page-header-actions">
+                <p class="coureur-count">
+                    <span class="coureur-count-label">
+                        Nombre de coureurs :
+                    </span>
+                    <span id="nb" class="coureur-count-value"></span>
+                </p>
+            </div>
+        </div>
+
+        <div class="page-header-filters">
+            <div class="zone-recherche">
+                <label for="search">
+                    Licence, nom ou club
+                </label>
+                <div class="champ-recherche">
+                    <div class="input-recherche">
+                        <input
+                                type="text"
+                                id="search"
+                                placeholder="Licence, nom ou club..."
+                                pattern="[A-Za-z0-9 -]+"
+                                autocomplete="off">
+                        <span class="icone-recherche" aria-hidden="true"> ⌕ </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-body">
+        <div class="table-responsive-sm coureur-table-wrapper">
+            <table id="leTableau" class="coureur-table">
+                <thead>
+                <tr>
+                    <th
+                            data-champ="licence"
+                            data-type="text"
+                            style="width: 130px; text-align: center;">
+                        Licence
+                    </th>
+                    <th
+                            data-champ="nomPrenom"
+                            data-type="text"
+                            style="width: 350px; text-align: left;">
+                        Nom prénom
+                    </th>
+                    <th
+                            data-champ="sexe"
+                            data-type="text"
+                            style="width: 80px; text-align: center;">
+                        Sexe
+                    </th>
+                    <th
+                            data-champ="dateNaissanceFr"
+                            data-type="date"
+                            style="width: 160px; text-align: center;">
+                        Né(e) le
+                    </th>
+                    <th
+                            data-champ="idCategorie"
+                            data-type="text"
+                            style="width: 100px; text-align: center;">
+                        Cat.
+                    </th>
+                    <th
+                            data-champ="nomClub"
+                            data-type="text"
+                            style="width: 350px; text-align: left;">
+                        Club
+                    </th>
+                    <th>FFA</th>
+                    <th>Email</th>
+                    <th>Téléphone</th>
+
+                </tr>
+                </thead>
+                <tbody id="lesLignes"></tbody>
+            </table>
+        </div>
+    </div>
+</div>

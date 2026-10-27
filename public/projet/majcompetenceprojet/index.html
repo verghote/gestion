@@ -1,0 +1,34 @@
+
+<div class="page-card">
+    <div class="page-header">
+        <div class="page-header-top">
+            <h1 class="page-title">
+                Mise à jour des compétences associées à un projet
+            </h1>
+        </div>
+    </div>
+
+    <div class="page-body">
+        <div class="projet-selectionne">
+            <span class="projet-label">
+                Projet :
+            </span>
+            <span id="nom" class="projet-nom"></span>
+        </div>
+
+        <div id="listeCompetence"></div>
+    </div>
+</div>
+
+<!-- Modèle d'une ligne compétence -->
+<template id="modeleCompetence">
+    <div class="d-flex mb-1 ligne-competence">
+        <input
+                type="checkbox"
+                class="form-check-input my-auto m-3"
+                name="competence"
+                style="width:25px; height:25px">
+
+        <label class="my-auto"></label>
+    </div>
+</template>

@@ -1,0 +1,69 @@
+
+<div class="page-card">
+    <header class="page-header">
+        <div class="page-header-top">
+            <h1 class="page-title">
+                Les annonces
+            </h1>
+            <div class="page-header-actions">
+                <button id="deleteOld" class="btn btn-sm btn-danger mb-1">
+                    🗑️ Supprimer les anciennes annonces
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-body page-body-annonces">
+        <div id="msg"></div>
+
+        <table>
+            <thead>
+            <tr>
+                <th style="width:60px; color:red; text-align:center"></th>
+                <th style="width:80px">Date</th>
+                <th>Course</th>
+                <th style="width:50px">Activation</th>
+            </tr>
+            </thead>
+
+            <tbody id="lesLignes"></tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modèle d'une ligne annonce -->
+<template id="modeleLigne">
+    <tr class="align-middle">
+        <td class="td-actions">
+            <button
+                    type="button"
+                    class="bouton-action btn-modifier"
+                    title="Modifier l'annonce"
+                    aria-label="Modifier l'annonce"
+                    style="color:orange; background:none">
+                ✎
+            </button>
+
+            <button
+                    type="button"
+                    class="bouton-action btn-supprimer"
+                    title="Supprimer l'annonce"
+                    aria-label="Supprimer l'annonce"
+                    style="color:red; background:none">
+                ✘
+            </button>
+        </td>
+
+        <td class="td-date"></td>
+
+        <td class="td-nom"></td>
+
+        <td class="td-actif" style="text-align:center">
+            <input
+                    type="checkbox"
+                    class="form-check-input checkbox-actif"
+                    aria-label="Activer/Désactiver l'annonce"
+                    style="width:25px; height:25px">
+        </td>
+    </tr>
+</template>
